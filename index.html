@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Достопримечательности Талдыкоргана</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ===== Общие стили ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+            color: #444;
+        }
+
+        /* ===== Анимация заголовка ===== */
+        @keyframes headerAnimation {
+            0% { opacity: 0; transform: translateY(-20px); }
+            50% { transform: translateY(5px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: #f3f7f5;
+            color: #2f4f4f;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            animation: headerAnimation 2s ease-out;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            color: #3b6f60;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav a {
+            color: #5f8575;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3b6f60;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* ===== Карточки достопримечательностей ===== */
+        .card {
+            background: #ffffff;
+            margin-bottom: 25px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h2 {
+            margin-top: 0;
+            color: #5f8575;
+        }
+
+        /* ===== Форма отзывов ===== */
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background: #5f8575;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #3b6f60;
+        }
+
+        footer {
+            background: #f3f7f5;
+            color: #2f4f4f;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== Шапка сайта ===== -->
+<header>
+    <h1>Достопримечательности Талдыкоргана</h1>
+    <p>Исторические, культурные и современные символы города</p>
+</header>
+
+<!-- ===== Навигация ===== -->
+<nav>
+    <a href="#park">Центральный парк</a>
+    <a href="#arka">Арка</a>
+    <a href="#tynyshpaev">Музей Тынышпаева</a>
+    <a href="#zhansugurov">Музей Жансугурова</a>
+    <a href="#square">Центральная площадь</a>
+    <a href="#ring">Кольцо с мини-Байтереком</a>
+    <a href="#city-pool">Городской бассейн</a>
+</nav>
+
+<!-- ===== Контент ===== -->
+<div class="container">
+    <!-- Центральный парк -->
+    <div class="card" id="park">
+        <img src="images/park.jpg" alt="Центральный парк">
+        <div class="card-content">
+            <h2>Центральный парк</h2>
+            <p>Главный городской парк с зелёными зонами для прогулок, детскими площадками и местами для отдыха. Отличное место для семейного отдыха.</p>
+        </div>
+    </div>
+
+    <!-- Арка -->
+    <div class="card" id="arka">
+        <img src="images/arka.jpg" alt="Арка Жетісу">
+        <div class="card-content">
+            <h2>Арка «Жетісу»</h2>
+            <p>Арка стала символом города. Она часто используется как место для фото и городских мероприятий.</p>
+        </div>
+    </div>
+
+    <!-- Музей Тынышпаева -->
+    <div class="card" id="tynyshpaev">
+        <img src="images/tynyshpaev.jpg" alt="Музей Тынышпаева">
+        <div class="card-content">
+            <h2>Музей Тынышпаева</h2>
+            <p>Музей посвящён известному деятелю науки и культуры. Здесь можно узнать о его жизни и достижениях.</p>
+        </div>
+    </div>
+
+    <!-- Музей Жансугурова -->
+    <div class="card" id="zhansugurov">
+        <img src="images/zhansugurov.jpg" alt="Музей Жансугурова">
+        <div class="card-content">
+            <h2>Музей И. Жансугурова</h2>
+            <p>Музей посвящён писателю и поэту. Экспозиция включает документы, личные вещи и творческое наследие Жансугурова.</p>
+        </div>
+    </div>
+
+    <!-- Центральная площадь -->
+    <div class="card" id="square">
+        <img src="images/square.jpg" alt="Центральная площадь">
+        <div class="card-content">
+            <h2>Центральная площадь</h2>
+            <p>Главная площадь города, место проведения праздников, концертов и народных мероприятий.</p>
+        </div>
+    </div>
+
+    <!-- Кольцо с мини-Байтереком -->
+    <div class="card" id="ring">
+        <img src="images/ring.jpg" alt="Кольцо с мини-Байтереком">
+        <div class="card-content">
+            <h2>Кольцо с мини-Байтереком</h2>
+            <p>Дорога с круговым движением, в центре которой установлен мини-Байтерек — символ города и популярное место для фотографий.</p>
+        </div>
+    </div>
+
+    <!-- Городской бассейн -->
+    <div class="card" id="city-pool">
+        <img src="images/city_pool.jpg" alt="Городской бассейн">
+        <div class="card-content">
+            <h2>Городской бассейн</h2>
+            <p>Бассейн с открытыми и закрытыми дорожками, зонами отдыха и спортивными программами для всех возрастов.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Форма отзывов ===== -->
+<div class="container" id="reviews">
+    <h2>Оставьте отзыв</h2>
+    <form id="reviewForm">
+        <input type="text" placeholder="Ваше имя" required><br><br>
+        <textarea placeholder="Ваш отзыв" required></textarea><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="reviewList"></div>
+</div>
+
+<!-- ===== JavaScript для анимаций и отзывов ===== -->
+<script>
+    // Появление карточек при скролле
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    cards.forEach(card => observer.observe(card));
+
+    // Работа формы отзывов
+    const form = document.getElementById('reviewForm');
+    const reviewList = document.getElementById('reviewList');
+
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = form.querySelector('input').value;
+        const text = form.querySelector('textarea').value;
+
+        const div = document.createElement('div');
+        div.innerHTML = `<strong>${name}:</strong> <p>${text}</p>`;
+        div.style.borderBottom = '1px solid #e0e0e0';
+        div.style.padding = '8px 0';
+
+        reviewList.prepend(div); // новые отзывы сверху
+        form.reset();
+    });
+</script>
+
+<footer>
+    © 2025 Талдыкорган. Все права защищены.
+</footer>
+
+</body>
+</html>
